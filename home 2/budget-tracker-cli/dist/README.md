@@ -3,18 +3,15 @@
 Простое CLI приложение для отслеживания бюджета на TypeScript.
 
 ## Структура проекта
-budget-tracker-cli/
-
-node_modules/
-
-src/
- index.ts
- calculation-demo.ts
-
-dist/
- package.json
- tsconfig.json
- README.md
+- budget-tracker-cli/
+- ├── node_modules/
+- ├── src/
+- │ ├── index.ts
+- │ └── calculation-demo.ts
+- ├── dist/
+- ├── package.json
+- ├── tsconfig.json
+- └── README.md
 
 
 ## Установка и запуск
@@ -39,7 +36,6 @@ npm run dev - сборка и запуск
 
 npm run demo - запуск демо расчетов
 
-text
 
 ## Инструкции по запуску:
 
