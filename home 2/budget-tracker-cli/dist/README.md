@@ -16,7 +16,6 @@ dist/
  tsconfig.json
  README.md
 
-text
 
 ## Установка и запуск
 
