@@ -4,10 +4,13 @@
 
 ## Структура проекта
 budget-tracker-cli/
+
 node_modules/
+
 src/
  index.ts
  calculation-demo.ts
+
 dist/
  package.json
  tsconfig.json
