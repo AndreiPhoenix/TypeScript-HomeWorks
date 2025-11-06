@@ -19,7 +19,6 @@
 ```bash
 npm install
 
-markdown
 ### Скомпилируйте TypeScript:
 
 ```bash
