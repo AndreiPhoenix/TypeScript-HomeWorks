@@ -19,16 +19,12 @@
 ```bash
 npm install
 
-### Скомпилируйте TypeScript:
-
-```bash
+Скомпилируйте TypeScript:
+bash
 npm run build
-
-### Запустите приложение:
-
-```bash
+Запустите приложение:
+bash
 npm start
-
-### Или одной командой:
-```bash
+Или одной командой:
+bash
 npm run dev
