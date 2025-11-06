@@ -1,0 +1,17 @@
+{
+  "name": "budget-tracker-cli",
+  "version": "1.0.0",
+  "description": "CLI утилита для анализа бюджета",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "keywords": ["budget", "tracker", "cli"],
+  "author": "",
+  "license": "MIT"
+}
