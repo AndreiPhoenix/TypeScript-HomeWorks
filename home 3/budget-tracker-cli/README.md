@@ -17,15 +17,19 @@
 1. Установите зависимости:
 ```bash
 npm install
+```bash
 
 2. Скомпилируйте TypeScript:
 ```bash
 npm run build
+```bash
 
 3. Запустите приложение:
 ```bash
 npm start
+```bash
 
     Или одной командой:
 ```bash
 npm run dev
+```bash
