@@ -15,13 +15,6 @@
 ## Установка и запуск
 
 1. Установите зависимости:
-   npm install
+```bash
+npm install
 
-2. Скомпилируйте TypeScript:
-   npm run build
-
-3. Запустите приложение:
-   npm start
-
-   Или одной командой:
-   npm run dev
