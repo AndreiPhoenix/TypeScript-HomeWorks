@@ -3,23 +3,23 @@
 Проект для отслеживания бюджета с использованием TypeScript и пространств имен (namespace).
 
 ## Структура проекта
-budget-tracker-cli/
-├── src/
-│ ├── interfaces/
-│ │ ├── TransactionType.ts
-│ │ ├── ITransaction.ts
-│ │ ├── IAccount.ts
-│ │ ├── ISummary.ts
-│ │ └── IAccountManager.ts
-│ ├── classes/
-│ │ ├── Transaction.ts
-│ │ ├── Account.ts
-│ │ └── AccountManager.ts
-│ └── index.ts
-├── dist/
-├── package.json
-├── tsconfig.json
-└── README.md
+##budget-tracker-cli/
+##├── src/
+##│ ├── interfaces/
+##│ │ ├── TransactionType.ts
+##│ │ ├── ITransaction.ts
+##│ │ ├── IAccount.ts
+##│ │ ├── ISummary.ts
+##│ │ └── IAccountManager.ts
+##│ ├── classes/
+##│ │ ├── Transaction.ts
+##│ │ ├── Account.ts
+##│ │ └── AccountManager.ts
+##│ └── index.ts
+##├── dist/
+##├── package.json
+##├── tsconfig.json
+##└── README.md
 
 
 ## Особенности реализации
