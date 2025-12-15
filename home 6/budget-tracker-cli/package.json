@@ -1,0 +1,21 @@
+{
+  "name": "budget-tracker-cli",
+  "version": "1.0.0",
+  "description": "Budget Tracker CLI with TypeScript Generics",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "start:generics": "npm run build && node dist/index.js generics",
+    "start:calculations": "npm run build && node dist/index.js calculations",
+    "start:all": "npm run build && node dist/index.js all",
+    "dev": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["typescript", "generics", "budget", "cli"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
