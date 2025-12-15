@@ -49,3 +49,8 @@ npm start
 3. Установите зависимости:
 ```bash
 npm install
+npm run build
+
+
+Запустите приложение:
+npm start
