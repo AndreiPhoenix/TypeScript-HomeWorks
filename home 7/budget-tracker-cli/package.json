@@ -1,0 +1,16 @@
+{
+  "name": "budget-tracker-cli",
+  "version": "1.0.0",
+  "description": "Бюджетный трекер с использованием TypeScript и namespace",
+  "main": "dist/budget-tracker.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/budget-tracker.js"
+  },
+  "keywords": ["budget", "tracker", "typescript"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
