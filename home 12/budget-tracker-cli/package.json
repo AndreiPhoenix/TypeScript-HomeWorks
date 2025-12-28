@@ -1,0 +1,25 @@
+{
+  "name": "budget-tracker-cli",
+  "version": "1.0.0",
+  "description": "CLI приложение для учета личных финансов с декораторами TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["budget", "tracker", "cli", "typescript", "decorators"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "reflect-metadata": "^0.2.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^9.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
