@@ -8,8 +8,16 @@ export function LogClass<T extends { new (...args: any[]): {} }>(
   return class extends constructor {
     constructor(...args: any[]) {
       super(...args);
+      const className = constructor.name;
+      const argsString = args.map(arg => {
+        if (typeof arg === 'object' && arg !== null) {
+          return JSON.stringify(arg, null, 2);
+        }
+        return String(arg);
+      }).join(', ');
+      
       console.log(
-        `Создан экземпляр класса ${constructor.name} с аргументами: ${JSON.stringify(args)}`
+        `[${new Date().toISOString()}] Создан экземпляр класса ${className} с аргументами: [${argsString}]`
       );
     }
   };
