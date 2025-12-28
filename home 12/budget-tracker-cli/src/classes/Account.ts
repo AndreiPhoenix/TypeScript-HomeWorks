@@ -7,6 +7,7 @@ import { LogClass } from '../decorators/LogClass';
 import { LogMethod } from '../decorators/LogMethod';
 import { ReadOnly } from '../decorators/ReadOnly';
 import { Metadata } from '../decorators/Metadata';
+import 'reflect-metadata';
 
 @LogClass
 export class Account implements IAccount {
@@ -19,6 +20,7 @@ export class Account implements IAccount {
   public balance: number;
   
   @Metadata('description', 'Массив транзакций счета')
+  @Metadata('type', 'ITransaction[]')
   public transactions: ITransaction[];
   
   constructor(id: string, name: string, initialBalance: number = 0) {
@@ -96,13 +98,35 @@ export class Account implements IAccount {
   public getSummaryString(): string {
     const summary = this.getSummary();
     const description = Reflect.getMetadata('description', this, 'transactions') || 'Транзакции';
+    const type = Reflect.getMetadata('type', this, 'transactions') || 'неизвестный тип';
     
     return `
-      Счет: ${summary.accountName} (${summary.accountId})
-      Баланс: ${summary.balance.toFixed(2)}
-      Доходы: ${summary.totalIncome.toFixed(2)}
-      Расходы: ${summary.totalExpense.toFixed(2)}
-      ${description}: ${summary.transactionCount}
+========================================
+Счет: ${summary.accountName}
+ID: ${summary.accountId}
+----------------------------------------
+Баланс: ${summary.balance.toFixed(2)} руб.
+Доходы: ${summary.totalIncome.toFixed(2)} руб.
+Расходы: ${summary.totalExpense.toFixed(2)} руб.
+----------------------------------------
+${description} (${type}): ${summary.transactionCount}
+========================================
     `.trim();
+  }
+  
+  // Дополнительные методы для удобства
+  
+  public getTransactionsByType(type: TransactionType): ITransaction[] {
+    return this.transactions.filter(t => t.type === type);
+  }
+  
+  public getTransactionsByCategory(category: string): ITransaction[] {
+    return this.transactions.filter(t => t.category === category);
+  }
+  
+  public getTotalByCategory(category: string): number {
+    return this.transactions
+      .filter(t => t.category === category)
+      .reduce((sum, t) => sum + t.amount, 0);
   }
 }
