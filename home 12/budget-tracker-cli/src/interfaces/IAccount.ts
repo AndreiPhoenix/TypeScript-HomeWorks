@@ -2,6 +2,9 @@ import { TransactionType } from './TransactionType';
 import { ITransaction } from './ITransaction';
 import { ISummary } from './ISummary';
 
+/**
+ * Интерфейс счета
+ */
 export interface IAccount {
   id: string;
   name: string;
