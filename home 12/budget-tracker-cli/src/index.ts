@@ -162,4 +162,32 @@ async function main() {
     console.log(`Счетов осталось: ${manager.accounts.length}\n`);
     
     // Финальная сводка
-    console.log('\n4
+    console.log('\n4. ФИНАЛЬНАЯ СВОДКА:\n');
+    console.log('Все счета:');
+    manager.accounts.forEach((acc, index) => {
+      console.log(`${index + 1}. ${acc.name}: ${acc.balance.toFixed(2)} руб. (${acc.getTransactions().length} транзакций)`);
+    });
+    
+    console.log('\n' + '='.repeat(60));
+    console.log('ДЕМОНСТРАЦИЯ ЗАВЕРШЕНА УСПЕШНО!');
+    console.log('='.repeat(60));
+    
+  } catch (error) {
+    console.error('\n' + '='.repeat(60));
+    console.error('ПРОИЗОШЛА ОШИБКА:');
+    console.error('='.repeat(60));
+    console.error(error);
+    
+    if (error instanceof Error) {
+      console.error(`Сообщение: ${error.message}`);
+      console.error(`Стек вызовов: ${error.stack}`);
+    }
+  }
+}
+
+// Запуск демонстрации
+if (require.main === module) {
+  main().catch(console.error);
+}
+
+export { main };
