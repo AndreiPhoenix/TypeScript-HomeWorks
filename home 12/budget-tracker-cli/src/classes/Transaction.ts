@@ -30,6 +30,11 @@ export class Transaction implements ITransaction {
   }
   
   public toString(): string {
-    return `Transaction: ${this.type} | ${this.amount} | ${this.category} | ${this.description || ''}`;
+    const typeStr = this.type === TransactionType.INCOME ? 'Доход' : 'Расход';
+    const dateStr = this.date.toLocaleDateString('ru-RU');
+    
+    return `[${dateStr}] ${typeStr}: ${this.amount} руб. (${this.category}) ${
+      this.description ? `- ${this.description}` : ''
+    }`.trim();
   }
 }
